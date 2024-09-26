@@ -17,7 +17,8 @@ public class PlayerController : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput);
-
+        
+        //boolean expression, only runs when true, boolean = true/false
         if(transform.position.x < -10)
         {
             transform.position = new Vector3(-10, transform.position.y, transform.position.z);
