@@ -21,6 +21,7 @@ public class DestroyOOB : MonoBehaviour
         }
         else if (transform.position.z < lowerBound)
         {
+            Debug.Log("Game Over Easy");
             Destroy(gameObject);
         }
     }
