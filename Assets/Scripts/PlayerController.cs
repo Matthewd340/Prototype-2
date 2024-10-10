@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
     float horizontalInput;
     public float speed = 5;
     public float xRange = 10;
-    public GameObject projectilePrefab;
-
+    public GameObject[] projectilePrefabs;
+    private int projectileIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +36,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //launch projectile
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            int projectileIndex = Random.Range(0, projectilePrefabs.Length);
+            Instantiate(projectilePrefabs[projectileIndex], transform.position, projectilePrefabs[projectileIndex].transform.rotation);
         }               //parameter         parameter           parameter
                         //object to clone   where to place      what direction
     }

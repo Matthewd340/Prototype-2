@@ -14,7 +14,7 @@ public class SpawnManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {                   //name                  time/delay        rate
         InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
         //calls SpawnRandomAnimal every 1.5 seconds after 2 seconds have passed
     }
@@ -30,6 +30,7 @@ public class SpawnManager : MonoBehaviour
         
             Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
             int animalIndex = Random.Range(0, animalPrefabs.Length);
+            Debug.Log(animalPrefabs.Length);
             //picks an animal at random, ranging from index values 0-2
             Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
             //spawns the randomly selected animal        
