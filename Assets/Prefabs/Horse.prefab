@@ -1032,10 +1032,10 @@ GameObject:
   - component: {fileID: 5424982173541482003}
   - component: {fileID: -7918026421991975240}
   - component: {fileID: -6880882878165072653}
-  - component: {fileID: 8845417947004980810}
+  - component: {fileID: -6314735757981103506}
   m_Layer: 0
   m_Name: Horse
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1135,7 +1135,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8845417947004980810
+--- !u!114 &-6314735757981103506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1144,9 +1144,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 168774864342293606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87e35abd233bd4be6a8d616fd50fab56, type: 3}
+  m_Script: {fileID: 11500000, guid: 8211e0a118a8a45a9b7dc87260de2bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManagerScript: {fileID: 0}
+  topBound: 20
+  lowerBound: -5
 --- !u!1 &168774864342293904
 GameObject:
   m_ObjectHideFlags: 0
